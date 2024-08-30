@@ -22,7 +22,7 @@ function changeMessage() {
         document.getElementById('div-texto').textContent = messages[currentIndex];
     } else {
         // Redireciona para outra página após a última mensagem
-        window.location.href = "SOldieroflove.html"; // Substitua "pagina2.html" pela URL desejada
+        window.location.href = "Soldieroflove.html"; // Substitua "pagina2.html" pela URL desejada
     }
 }
 
