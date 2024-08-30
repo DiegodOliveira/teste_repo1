@@ -11,7 +11,7 @@ const messages = [
 // Index da mensagem atual
 let currentIndex = -1; // Começa em -1 para que o primeiro clique mostre a primeira mensagem
 
-// Função para trocar a mensagem ou redirecionar
+// Função para trocar a mensagem ou inserir o vídeo
 function changeMessage() {
     // Incrementa o índice
     currentIndex += 1;
@@ -21,8 +21,11 @@ function changeMessage() {
         // Atualiza o texto no div
         document.getElementById('div-texto').textContent = messages[currentIndex];
     } else {
-        // Redireciona para outra página após a última mensagem
-        window.location.href = "Soldieroflove.html"; // Substitua "pagina2.html" pela URL desejada
+        // Substitui o conteúdo do div pelo vídeo e a mensagem final
+        document.getElementById('div-texto').innerHTML = `
+            <iframe width="864" height="486" src="https://www.youtube.com/embed/Sz7LQUHRxTI" title="Soldier Of Love - Pearl Jam (Legendado)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>caso o vídeo não funcione clique em assistir no youtube por favor</h2>
+        `;
     }
 }
 
