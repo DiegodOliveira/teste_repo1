@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: cornflowerblue;
     display: flex;
     justify-content: center;
@@ -12,17 +12,20 @@ body{
     flex-direction: column;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
     color: black;
 }
 
-#div-grande{
-    margin: 30px;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.message {
     font-size: 24px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
     text-align: center;
+}
+
+.message.visible {
+    opacity: 1;
 }
 
 button {
@@ -37,4 +40,21 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 480px) {
+    .message {
+        font-size: 18px; /* Diminui o tamanho da fonte em telas pequenas */
+    }
+
+    button {
+        width: 100%; /* Faz o botão ocupar a largura total em telas pequenas */
+        font-size: 16px; /* Diminui o tamanho da fonte do botão */
+        padding: 15px; /* Aumenta o padding para tornar o botão mais fácil de tocar */
+    }
+
+    body {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
+    }
 }
