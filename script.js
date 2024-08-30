@@ -25,6 +25,10 @@ function changeMessage() {
         document.getElementById('div-texto').innerHTML = `
             <iframe width="864" height="486" src="https://www.youtube.com/embed/Sz7LQUHRxTI" title="Soldier Of Love - Pearl Jam (Legendado)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
+
+        document.getElementById('change-text-button').innerHTML = `
+        
+        `;
     }
 }
 
